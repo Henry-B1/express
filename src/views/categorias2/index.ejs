@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Categorias</title>
+    <link rel= "stylesheet" href="/css/style.css"></link>
 </head>
 <body>
     <header>
@@ -13,12 +14,15 @@
             <a href="/usuarios">Usuarios</a>
             <a href="/carts">Carritos</a>
             <a href="/categorias">Categorias</a>
-            <a href="/categorias2">Categorias Video</a>
             <a href="/inventario">Inventario</a>
-
         </nav>
     </header>
-    <h1>Hola desde el private</h1>
-    <h2>Mi nombre es Henry Batén</h2>
+    <h1>Categorias</h1>
+    <a href="/categorias2/create">Crear Nueva Categoria</a>
+    <ul>
+        <%categorias.forEach(categoria => { %>
+            <a href="/categorias2/<%= categoria.id %>"><li><%= categoria.nombre %></li></a>
+        <%}); %>
+    </ul>
 </body>
 </html>

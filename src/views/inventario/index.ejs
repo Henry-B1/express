@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inventario</title>
+    <link rel="stylesheet" href="/css/style.css"></link>
 </head>
 <body>
     <header>
@@ -13,12 +14,15 @@
             <a href="/usuarios">Usuarios</a>
             <a href="/carts">Carritos</a>
             <a href="/categorias">Categorias</a>
-            <a href="/categorias2">Categorias Video</a>
-            <a href="/inventario">Inventario</a>
-
+            <a href="/categorias2">Categroia Video</a>
         </nav>
     </header>
-    <h1>Hola desde el private</h1>
-    <h2>Mi nombre es Henry Batén</h2>
+    <h1>Inventario</h1>
+    <a href="/inventario/create">Crear nuevo ítem</a>
+    <ul>
+        <% inventario.forEach(item => { %>
+            <a href="/inventario/<%= item.id %>"><li><%= item.descripcion %></li></a>
+        <% }); %>
+    </ul>
 </body>
 </html>
